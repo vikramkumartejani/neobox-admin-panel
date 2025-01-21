@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f8f8f8;
+}
+
+
+.no-scrollbar {
+  scrollbar-width: none; 
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 0px;
+}
+
+.shadow-1 {
+  box-shadow: 0 8px 16px rgba(134, 154, 192, 0.45);
+}
+.shadow-2 {
+  box-shadow: 0 1px 5px -2px rgba(0, 0, 0, 0.15);
+}
+.shadow-3 {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.shadow-4 {
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.shadow-5 {
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.shadow-6 {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+.shadow-7 {
+  box-shadow: 0 4px 10px 0 rgba(189, 208, 223, 0.25);
+}
+
+.shadow-8 {
+  box-shadow: 0 26px 80px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.2) !important;
+}
+.shadow-9 {
+  box-shadow: 0 6px 6px -3px #e6e6e6;
+}
+
+.shadow-10 {
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.replace-card {
+  min-height: calc(100% - 1rem);
+}
+
+.custom-select {
+  display: inline-block;
+  width: 100%;
+  height: calc(1.5em + 0.75rem + 2px);
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5'%3E%3Cpath fill='%233c4e71' d='M2 0 0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E"); /* Custom dropdown arrow */
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 8px 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+/* custom checkbox */
+.custom-checkbox {
+  appearance: none;
+  background-color: white;
+  border: 1px solid #d4d4d8;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+}
+
+.custom-checkbox:checked {
+  background-color: #0671e3 !important;
+  border-color: #0671e3 !important;
+}
+
+.custom-checkbox:checked::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 5.5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-select {
+  background: #fff
+    url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='5'%3E%3Cpath fill='%233c4e71' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E")
+    right 0.75rem center / 8px 10px no-repeat;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
+}
+
+.css-19opgx6-MuiFormControlLabel-root {
+  margin-left: 0px !important;
+}
+
+.ql-toolbar {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 5px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.ql-toolbar .ql-formats {
+  margin: 0 5px;
+}
+
+.ql-container {
+  font-family: "Poppins", sans-serif;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  min-height: 300px !important;
+}
+
+.rdrDateRangePickerWrapper {
+  display: inline-flex;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.rdrDateDisplayWrapper {
+  display: none;
+}
+
+.rdrInputRanges {
+  padding: 10px 0;
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .rdrDateRangePickerWrapper {
+    display: inline-flex;
+    flex-direction: column;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .rdrMonths {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .rdrMonthAndYearWrapper {
+    display: none;
+  }
+}
