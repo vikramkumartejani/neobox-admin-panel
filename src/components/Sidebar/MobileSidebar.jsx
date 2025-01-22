@@ -25,30 +25,19 @@ import StoreIcon from "../../assets/nav-icons/store.svg"
 import { FaCaretDown } from "react-icons/fa";
 
 
-const MobileSidebar = ({ isExpanded, setIsExpanded }) => {
-    const [isAnalyticsDropdownOpen, setAnalyticsDropdownOpen] = useState(false);
+const MobileSidebar = () => {
 
-    const handleSidebarToggle = () => {
-        setIsExpanded((prev) => !prev);
-    };
+    const [isExpanded, setIsExpanded] = useState(true);
+    const [isAnalyticsDropdownOpen, setIsAnalyticsDropdownOpen] = useState(false);
 
     const toggleAnalyticsDropdown = () => {
-        if (!isExpanded) {
-            handleSidebarToggle();
-        } else {
-            setAnalyticsDropdownOpen((prev) => !prev);
-        }
+        setIsAnalyticsDropdownOpen(!isAnalyticsDropdownOpen);
     };
 
-
     return (
-        <div>
-            <div
-                className={`h-full flex sidebar-behind top-0 left-0 ${isExpanded ? "lg:w-[240px] w-[65px]" : "min-w-[65px]"
-                    }`}
-            ></div>
+        <div className="fixed z-40">
             <aside
-                className={`fixed top-0 left-0 bg-black pt-16 h-screen transition-all duration-200 overflow-hidden overflow-y-auto ${isExpanded
+                className={`fixed left-0 bg-black top-0 pt-14 z-[99999] h-screen transition-all duration-200 overflow-hidden overflow-y-auto ${isExpanded
                     ? "lg:w-[240px] w-[220px]"
                     : "w-[65px]"
                     } flex flex-col justify-between z-[30]`}
